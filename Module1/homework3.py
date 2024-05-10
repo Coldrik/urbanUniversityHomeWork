@@ -1,0 +1,8 @@
+my_string = input('Введите Фамилию Имя и Отчество: ')
+print(len(my_string))
+print(my_string.upper())
+print(my_string.lower())
+my_string = ''.join(c for c in my_string if c not in ' ')
+print (my_string)
+print (my_string[0])
+print (my_string[-1])
