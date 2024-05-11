@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="161814e2-8896-4008-98a8-fdaa55154fb3" name="Changes" comment="Add homework #3">
+    <list default="true" id="161814e2-8896-4008-98a8-fdaa55154fb3" name="Changes" comment="Add gitignore">
+      <change afterPath="$PROJECT_DIR$/Module1/homework4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,18 +24,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Coldrik"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Coldrik&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Coldrik/urbanUniversityHomeWork.git",
-    "accountId": "f114f381-78fb-4d35-b1a4-919519996786"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Coldrik/urbanUniversityHomeWork.git&quot;,
+    &quot;accountId&quot;: &quot;f114f381-78fb-4d35-b1a4-919519996786&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -49,6 +50,7 @@
     "Python.homework1.executor": "Run",
     "Python.homework2.executor": "Run",
     "Python.homework3.executor": "Run",
+    "Python.homework4.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -117,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715367287839</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add gitignore">
+      <option name="closed" value="true" />
+      <created>1715368053157</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715368053157</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,6 +144,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="V1" />
     <MESSAGE value="Add homework #3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add homework #3" />
+    <MESSAGE value="Add gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add gitignore" />
   </component>
 </project>
