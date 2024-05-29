@@ -6,22 +6,22 @@ def length_of_element(symb):
 
 
 def unpack_func(s):
-    if s == []:
+    if not s:
         return s
 
     if isinstance(s[0], list):
-        return (unpack_func(s[0]) + unpack_func(s[1:]))
+        return unpack_func(s[0]) + unpack_func(s[1:])
 
     if isinstance(s[0], tuple):
-        return (unpack_func(list(s[0])) + unpack_func(list(s[1:])))
+        return unpack_func(list(s[0])) + unpack_func(list(s[1:]))
 
     if isinstance(s[0], dict):
-        return (unpack_func(list(s[0].items())) + unpack_func(s[1:]))
+        return unpack_func(list(s[0].items())) + unpack_func(s[1:])
 
     if isinstance(s[0], set):
-        return (unpack_func(list(s[0])) + unpack_func(list(s[1:])))
+        return unpack_func(list(s[0])) + unpack_func(list(s[1:]))
 
-    return(s[:1] + unpack_func(s[1:]))
+    return s[:1] + unpack_func(s[1:])
 
 
 def calculate_structure_sum(data):
