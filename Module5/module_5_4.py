@@ -12,6 +12,6 @@ for i in range(40):
     a = 'a' + str(i+1)
     listOfBuilding.append(Building(5, a))
     print('Создано здание: ', listOfBuilding[i].nameOfBuilding)
-print('Колличсество зданий: ', Building.building_total)
+print('Количество зданий: ', Building.building_total)
 
 
