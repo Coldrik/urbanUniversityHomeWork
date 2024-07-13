@@ -3,7 +3,7 @@ import time
 
 
 def print_file(file):
-    filepath = root
+    filepath = os.path.join(os.getcwd(), file)
     filetime = os.path.getmtime(file)
     formatted_time = time.strftime("%d.%m.%Y %H:%M", time.localtime(filetime))
     filesize = os.path.getsize(file)
