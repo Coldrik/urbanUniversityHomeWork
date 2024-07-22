@@ -18,12 +18,12 @@ class Iterator:
         c = self.pointer
         if self.step > 0 and self.stop > self.start:
             self.pointer += self.step
-            if self.pointer > self.stop + self.step:
+            if c > self.stop:
                 raise StopIteration()
 
         elif self.step < 0 and self.stop < self.start:
             self.pointer += self.step
-            if self.pointer < self.stop + self.step:
+            if c < self.stop:
                 raise StopIteration()
 
         else:
