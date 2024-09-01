@@ -1,0 +1,17 @@
+2024-09-01 23:31:07,711 | INFO | "test_challenge" выполнен успешно
+2024-09-01 23:31:07,712 | WARNING | Неверный тип данных для объекта Runner
+Traceback (most recent call last):
+  File "C:\Python_project\university\urbanUniversityHomeWork\Module12\tests_12_4.py", line 77, in test_run
+    self.new_Runner = Runner(None)
+                      ^^^^^^^^^^^^
+  File "C:\Python_project\university\urbanUniversityHomeWork\Module12\tests_12_4.py", line 14, in __init__
+    raise TypeError(f'Имя может быть только строкой, передано {type(name).__name__}')
+TypeError: Имя может быть только строкой, передано NoneType
+2024-09-01 23:31:07,716 | WARNING | Неверная скорость для Runner
+Traceback (most recent call last):
+  File "C:\Python_project\university\urbanUniversityHomeWork\Module12\tests_12_4.py", line 65, in test_walk
+    self.new_Runner = Runner('Forest', speed=-6)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python_project\university\urbanUniversityHomeWork\Module12\tests_12_4.py", line 19, in __init__
+    raise ValueError(f'Скорость не может быть отрицательной, сейчас {speed}')
+ValueError: Скорость не может быть отрицательной, сейчас -6
