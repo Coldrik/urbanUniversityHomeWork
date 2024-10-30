@@ -1,0 +1,9 @@
+{% extends "menu.html" %}
+
+{% block content %}
+
+    {% for i in games_to_buy%}
+        <p>&#8226 {{i }}   <button><a href="#">Купить </a> </button></p>
+    {% endfor %}
+
+{% endblock %}
