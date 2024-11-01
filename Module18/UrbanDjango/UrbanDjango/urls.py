@@ -17,15 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from task2.views import index, Index2
+# from task2.views import index, Index2
 # from task3.views import platform, games, cart
-from task4.views import platform, games, cart
+# from task4.views import platform, games, cart
+from task5.views import sign_up_by_django, sign_up_by_html
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
-    path('index/', Index2.as_view()),
-    path('platform/', platform),
-    path('platform/games', games),
-    path('platform/cart', cart),
+    path('', sign_up_by_html),
+    # path('index/', Index2.as_view()),
+    # path('platform/', platform),
+    # path('platform/games', games),
+    # path('platform/cart', cart),
+    path('django_sign_up/', sign_up_by_django),
 ]
