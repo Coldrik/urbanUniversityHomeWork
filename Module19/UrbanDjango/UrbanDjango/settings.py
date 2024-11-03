@@ -55,7 +55,7 @@ ROOT_URLCONF = 'UrbanDjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates/fifth_task'],
+        'DIRS': [BASE_DIR / 'templates/first_task'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
