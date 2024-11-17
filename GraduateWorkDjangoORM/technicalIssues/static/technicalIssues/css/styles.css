@@ -1,0 +1,46 @@
+/* Общие стили для пагинации */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination .step-links {
+    display: flex;
+    align-items: center;
+}
+
+.pagination a {
+    padding: 5px 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pagination a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.pagination .current {
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.items-per-page-form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.items-per-page-form select {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}

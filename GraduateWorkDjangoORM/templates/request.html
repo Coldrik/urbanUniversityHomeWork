@@ -1,0 +1,84 @@
+{% extends "menu.html" %}
+
+{% block content %}
+    <div class="row">
+        {% for i in page_obj %}
+            <div class="col-md-4">
+                <p>&#8226 ID: {{i.id }} | Конструктивная группа: {{i.dwg }} <br> Запрос: {{i.concessionRequest }}
+                    <br> Причина: {{i.caseOfProblem }} <br>  Автор запроса: {{i.user}} <br>
+                    Проверено: {{i.controlCheck }} <br> Решение: {{i.concessionReport }} <br>
+                    Автор решения: {{i.reporter}} <br>
+
+                    <button><a href="../add_report/{{ i.id }}">Выдать решение! </a> </button>
+
+                </p>
+                <form method="post" >
+                    {% csrf_token %}
+                    <button type="submit" name="main_issue" value= "{{ i.id }}">Подсветить проблему </button>
+                </form>
+                <p>----------------------------------------------------------------------------</p>
+            </div>
+        {% endfor %}
+    <br>
+
+    </div>
+{% endblock %}
+
+
+{% block fotter %}
+    {% if page_obj.has_other_pages %}
+        <ul class="paginator">
+            {% if page_obj.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}&items_per_page={{ items_per_page }}">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            {% endif %}
+
+            {% for i in page_obj.paginator.page_range %}
+                {% if page_obj.number == i %}
+                    <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">{{ i }}</a>
+                    </li>
+                {% else %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ i }}&items_per_page={{ items_per_page }}">{{ i }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}&items_per_page={{ items_per_page }}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    {% endif %}
+
+    <!-- Выпадающий список для выбора количества элементов на странице -->
+    <form method="GET" class="items-per-page-form">
+        <label for="items_per_page">Элементов на странице:</label>
+        <select name="items_per_page" id="items_per_page" onchange="this.form.submit()">
+            <option value="3" {% if items_per_page == 3 %}selected{% endif %}>3</option>
+            <option value="5" {% if items_per_page == 5 %}selected{% endif %}>5</option>
+            <option value="7" {% if items_per_page == 7 %}selected{% endif %}>7</option>
+            <option value="20" {% if items_per_page == 20 %}selected{% endif %}>20</option>
+            <option value="50" {% if items_per_page == 50 %}selected{% endif %}>50</option>
+        </select>
+    </form>
+{% endblock %}
